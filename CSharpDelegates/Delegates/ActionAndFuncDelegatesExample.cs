@@ -19,6 +19,16 @@ namespace CSharpDelegates.Delegates
             actionTarget("Action Message!", ConsoleColor.Yellow, 5);
 
 
+            // Anonymous method with Action delegate
+            Action<int, int> printSum = delegate (int a, int b)
+            {
+                int delegatesum = a + b;
+                Console.WriteLine("Using Anonymous Method With Action Delegate");
+                Console.WriteLine($"{a} + {b} equals {delegatesum}");
+            };
+
+            printSum(5, 6);
+
             /****************************************************************************************************************/
             /* Func<> */
             /****************************************************************************************************************/
